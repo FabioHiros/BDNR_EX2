@@ -7,9 +7,8 @@ def FavoteMenu(db):
         print("""
                 ##### MENU De Favoritos #####
                     1- Criar Favoritos
-                    2- Ler Favoritos
-                    3- Atualizar Favoritos
-                    4- Deletar Favoritos
+                    2- Atualizar Favoritos
+
                     
         """)
         option = input("Digite a opção desejada? (V para voltar) ")
@@ -18,15 +17,9 @@ def FavoteMenu(db):
             case '1':
                 strategy = AddToFavoritesStrategy()
                 product=strategy.create(db)
-            case '4':
-                strategy = DeleteOrderStrategy()
-                strategy.delete(db)
-                
-            case '3':
+
+            case '2':
                 strategy= UpdateFavoritesStrategy()
                 strategy.update(db)
-            case '2':
-                strategy = ReadOrderStrategy()
-                strategy.read(db)
             case 'v':
                 return

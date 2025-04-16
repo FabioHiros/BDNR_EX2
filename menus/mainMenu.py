@@ -24,5 +24,6 @@ def mainMenu():
                 OrderMenu(db)
             case '4':
                 FavoteMenu(db)
-
+            case 's':
+                return break
 
